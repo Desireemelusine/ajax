@@ -48,20 +48,20 @@ function loadData() {
 
 
   $.ajax( {
-      url: wikiUrl,
-      jsonp:"callback",
-      dataType: 'jsonp',
-      success: function(response) {
-         var articleList = response[1];
+    url: wikiUrl,
+    dataType: 'jsonp',
+    jsonp:"callback"
+} ).done (function(response) {
+   var articleList = response[1];
+   var url = 'https://en.wikipedia.org/wiki/'+ articleList[0];
+   $wikiElem.append('<li><a href= "'+url+'">' + articleList[0] +'</a></li>');
 
-         for (var i =0; i < articleList.lenght; i++) {
-         articleOne = articleList[i];
-         var url = 'https://en.wikipedia.org/wiki/'+ articleOne;
-         $wikiElem.append('<li><a href= "'+url+'">' + articleOne +'</a></li>');
-        };
-        clearTimeout(wikiTimeOut);
-      }
-  } );
+   for (var i =0; i < articleList.lenght; i++) {
+   articleOne = articleList[i];
+
+  };
+});
+
 
 
 
