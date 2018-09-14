@@ -44,7 +44,7 @@ function loadData() {
 
   var wikiTimeOut = setTimeout(function(){
   $wikiElem.text("failed to get wikipedia resources");
-  }, 8000);
+}, 10000);
 
 
   $.ajax( {
