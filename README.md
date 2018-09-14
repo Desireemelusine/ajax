@@ -7,4 +7,8 @@ The only file I worked is js/script.js, that contains:
 * getJSON - for New York Times
 * Ajax - for Wikipedia
 
+Click on the link and write the Address to visualize the result.
+Attention: Due to the fact we are working with API. Some parts of the page may not upload correctly. "This request has been blocked; the content must be served over HTTPS."
+            If that is the case is recommended to download the project
+
 Thank you!

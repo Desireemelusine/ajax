@@ -34,9 +34,9 @@ function loadData() {
       var article = articles[i];
       $nytElem.append('<li class="article">'+'<a href="'+article.web_url+'">'+article.headline.main+'</a>'+'<p>'+article.snippet+'</p>'+'</li>');
     };
-  }).fail(function() {
+  }).fail(setTimeout (function() {
       $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
-  });
+  },10000));
 
 
 // Wikipedia
@@ -61,10 +61,6 @@ function loadData() {
 
   };
 });
-
-
-
-
 
     return false;
 };
